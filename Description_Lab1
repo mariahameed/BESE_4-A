@@ -1,0 +1,322 @@
+Lab_1 contain 5 files
+1)	Image file
+2)	About.html
+3)	Home.html
+4)	Contact.html
+5)	Gallery.html
+
+Image file:
+It’s just an image inserted in the gallery.html page
+ 
+
+
+Before I explain the remaining files let me explain the code that is common in all files:
+
+Code	explanation
+<!DOCTYPE html>                                                    
+    
+   defines that the document is of type HTML
+
+    <html lang="en">
+     
+        <head>
+
+header of document starts here
+
+            <meta charset="utf-8">
+
+            <title>Lab_Task # 1</title> 
+it sets the title of the page
+
+
+
+            <!--[if lt IE 9]>
+                <script src="dist/html5shiv.js"></script>
+            <![endif]-->
+
+
+<style>
+Here starts the css part
+
+Now we are going to style ul
+	ul {
+		list-style-type: none;
+Remove the default style
+
+
+Set the margin to zero
+		margin: 0;
+
+Set padding to 0
+		padding: 0;
+Only data part that fits will be shown. There will be no scroll
+
+		overflow: hidden;
+	}
+
+
+Now we are going to style li
+We just set it to float right. Every new entry will be added to the left of the already present list
+
+	li {
+		float: right;
+	}
+
+
+
+
+
+
+	a:link, a:visited {
+Now we are going to style <a> when the link is visited or when nothing happen to link:
+
+
+		display: block;
+It’s display is block so within a single element e.g: “li” only a single a will appear on a line
+
+
+		width: 120px;
+Width will be 120px
+
+		font-weight: bold;
+Font will be bold
+
+		color: #FFFFFF;
+Font Color will be white
+
+		background-color: #567675;
+background Color will be  
+
+		text-align: center;
+text will be aligned at center
+
+		padding: 8px;
+there will be a gap of 8px between text and <a> borders on all sides
+
+		text-decoration: none;
+default <a> text decoration is removed
+
+		text-transform: uppercase;
+all the text will be in capital letters
+
+	}
+
+Now we are going to style <a> when we hover over the link or when the link is active:
+	a:hover, a:active {
+
+
+		background-color: #999888;
+Color will be:  
+
+	}
+</style>
+Css part ends here
+
+    
+</head>
+Header also ends here
+
+    <body style="background-color:#ffffff;">
+		Body background is set to whilte color
+
+	<div style="padding:30px;
+Now a div is made with padding=30 (there will be a 30px gap between it’s border and the elements inserted in this div )
+
+
+background-color:#444444; 
+Color is set to dark grey:  
+
+margin:-8px; 
+Margin is -8 to make it fit in the window with no gap between window and this div
+
+
+border:0px">
+		<nav>
+Now the navigation bar element starts 
+
+			<ul>
+We added an unordered list to navigation bar
+
+
+				<li>
+Added a list item
+In list item we placed an anchor with text:”Home”
+
+<a href="home.html">Home</a></li>
+				<li>
+<a href="about.html">About</a></li>
+				<li>
+<a href="contact.html">Contact</a></li>
+				<li>
+<a href="gallery.html" style="background-color:#666666">Gallery</a></li>
+			</ul>
+
+Unordered list ends here
+
+		</nav>
+Navigation bar ends here
+
+	</div>
+Div ends here
+
+		
+		<footer 
+style="padding:30px; 
+Now we will add the footer
+padding=30 (there will be a 30px gap between it’s border and the elements inserted in footer)
+
+
+background-color:#444444; 
+Color is set to dark grey:  
+
+color:#dddddd; ">
+Text color is set to light grey:
+
+Copyright
+Write text: “Copyright” in the footer
+
+</footer>
+Footer ends here
+
+</body>
+Body ends here
+
+</html>
+Html document ends here
+	
+
+Now I am going to explain what are additional things in these files
+About.html
+Code	
+	<div 
+Added a div
+
+Set it’s height to 400px
+
+style="height:400px; 
+
+padding-top:100px; 
+On top there will be a gap of 100px between div border and the elements inside this div
+
+On left side there will be a gap of 150px between div border and the elements inside this div
+
+padding-left:150px; 
+
+
+On right side there will be a gap of 150px between div border and the elements inside this div
+
+padding-right:150px">
+		My name is Maria Hameed. I am doing Software Engineering from NUST. I am currently in 5th semester. 
+		I like database, data analysis and algorithm, data structure and algorithm and maths and physics.	
+
+Added a line break
+
+<br/>
+		
+		Div ends here
+	</div>	
+
+Gallery.html
+It has just one new thing added
+Code	
+		<img src="img1.png">
+Adding an image with src=”img1.png”
+Here src is the reltive path, you can also assign absolute path.
+
+You can also set with and height of the image	
+
+
+Contact.html
+	
+In this page I added a div inside another div just for a nice display
+
+	<div style="height:450px; padding:30px; padding-left:120px">
+		<div style="padding:50px; padding-left:220px; background-color:#dddddd; ">
+Inside the inner div I have added a paragraph
+
+			<p>
+				Name: Maria Hameed	<br> <br>
+				Contact Number: 051-2222222	<br> <br>
+				Address: house#1, st#2 A-1/5 Islamabad <br> <br>
+			</p>	
+
+		</div>
+	</div>
+		
+
+
+
+
+
+
+Home.html
+I had to use table so I decided to It in this way :
+Here is what I made:
+ 
+
+You will be able to understand the whole logic by looking at this:
+ 
+
+So here you can see that I have added a table with 2 rows and 5 columns, 3 columns filled in upper row and 2 filled in lower row. 
+
+If I explain complete code here in the same order in which it is written in the file, it may become a little bit confusing, so I am going to divide it in parts and describe only unique parts of code
+
+	
+<table>
+Add table
+
+    <tr>
+Add a row to table
+
+        <td>
+Add a cell to the row
+
+        </td>
+Closes the cell
+
+    </tr>
+Closes the row
+
+<table>
+Closes the table	
+Now each cell has following code added:
+
+Code	explanation
+<td 
+Adds a cell
+
+style="padding-left:6px ; 
+Sets left padding as 6px 
+
+padding-right:6px;">
+Sets right padding as 6px
+
+
+<div 
+Adds a div
+
+style="padding:60px; 
+border-radius:50%; 
+Sets the radius. This changes the corners to circular
+
+background-color:#084B8A;">
+<h2> 
+<a> about </a> 
+</h2>
+Adds a heading to div
+
+</div>
+</td>
+Cell ends here	
+
+
+
+
+
+
+
+
+__________________________________________________________________________________
+The end
+__________________________________________________________________________________
+
